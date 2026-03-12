@@ -1,7 +1,7 @@
 ---
 title: "Práctica 01: Estructuras de Datos Lineales (Colas)"
 date: 2026-03-12
-author: "Acevedo Veronica 380207 y Josselyn Alexa Rivera Chavez 379219"
+author: "Acevedo Carrillo Veronica 380207 y Josselyn Alexa Rivera Chavez 379219"
 math: true
 categories: ["Paradigmas de Programación"]
 tags: ["C", "Estructuras de Datos", "Raylib"]
@@ -90,3 +90,11 @@ Con estas tres sesiones, se comprendió la importancia de la gestión de memoria
 * Raylib. (2026). *Documentation and Examples*. https://www.raylib.com
 
 ---
+## 9. Enlaces de la Entrega
+Veronica Acevedo Carrillo
+* **Repositorio:** [GitHub - portafolio_Paradigma](https://github.com/veroni384/portafolio_Paradigma)
+* **Página Publicada:** [Práctica 01 - My New Hugo Site](https://veroni384.github.io/portafolio_Paradigma/practica1/)
+
+Josselyn Rivera Chavez
+* **Repositorio:** [GitHub - portafolio_Paradigma](https://github.com/veroni384/portafolio_Paradigma)
+* **Página Publicada:** [Práctica 01 - My New Hugo Site]()

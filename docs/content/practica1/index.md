@@ -96,6 +96,6 @@ Veronica Acevedo Carrillo
 * **Página Publicada:** [Práctica 01 - My New Hugo Site](https://veroni384.github.io/portafolio_Paradigma/practica1/)
 
 
-Josselyn Rivera Chavez
-* **Repositorio:** [GitHub - portafolio_Paradigma](https://github.com/veroni384/portafolio_Paradigma)
-* **Página Publicada:** [Práctica 01 - My New Hugo Site]()
+Josselyn Alexa Rivera Chavez
+* **Repositorio:** [GitHub - portafolio_Paradigma](https://github.com/JosselynAlexa/portafolio-PP)
+* **Página Publicada:** [Práctica 01 - My New Hugo Site](https://josselynalexa.github.io/portafolio-PP/practica1/)

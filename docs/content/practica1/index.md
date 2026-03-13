@@ -11,8 +11,8 @@ tags: ["C", "Estructuras de Datos", "Raylib"]
 
 **Materia:** Paradigmas de la Programación  
 **Docente:** M.I. José Carlos Gallegos Mariscal  
-**Alumno:** Acevedo Carrillo Veronica y Josselyn Aleza Rivera Chavez [Tu Nombre]  
-**Matrícula:** 380207  
+**Alumno:** Acevedo Carrillo Veronica y Josselyn Alexa Rivera Chavez 
+**Matrícula:** 380207  y 379219
 **Grupo:** 941  
 
 ---
@@ -94,6 +94,7 @@ Con estas tres sesiones, se comprendió la importancia de la gestión de memoria
 Veronica Acevedo Carrillo
 * **Repositorio:** [GitHub - portafolio_Paradigma](https://github.com/veroni384/portafolio_Paradigma)
 * **Página Publicada:** [Práctica 01 - My New Hugo Site](https://veroni384.github.io/portafolio_Paradigma/practica1/)
+
 
 Josselyn Rivera Chavez
 * **Repositorio:** [GitHub - portafolio_Paradigma](https://github.com/veroni384/portafolio_Paradigma)

@@ -151,8 +151,7 @@ Polimorfismo
 * Flat → $50
 
 ## 7. Arquitectura MVC (Flask)
-![Imagen](image_a59f67.png)
-Model
+
 
 * models/vehicle.py
 * models/spot.py
@@ -206,7 +205,7 @@ Material de clase
 
 ### 10. Enlaces de la Entrega
 Veronica Acevedo Carrillo
-* Repositorio: GitHub
+* Repositorio:[GitHub - portafolio_Paradigma](https://github.com/veroni384/portafolio_Paradigma)
 * Página Publicada: Práctica 02
 
 Josselyn Alexa Rivera Chavez

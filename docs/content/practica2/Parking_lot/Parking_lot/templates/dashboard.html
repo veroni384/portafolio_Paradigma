@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header">
+  <h1 class="page-title">Dashboard</h1>
+  <span class="badge">{{ occ.occupied }}/{{ occ.total }} ocupados</span>
+</div>
+
+<!-- Estadísticas principales -->
+<div class="stats-grid">
+  <div class="stat-card stat-card--free">
+    <div class="stat-number">{{ occ.free }}</div>
+    <div class="stat-label">Lugares libres</div>
+  </div>
+  <div class="stat-card stat-card--occupied">
+    <div class="stat-number">{{ occ.occupied }}</div>
+    <div class="stat-label">Lugares ocupados</div>
+  </div>
+  <div class="stat-card stat-card--revenue">
+    <div class="stat-number">${{ "%.2f"|format(revenue) }}</div>
+    <div class="stat-label">Total recaudado</div>
+  </div>
+  <div class="stat-card stat-card--policy">
+    <div class="stat-number" style="font-size:1rem">{{ policy }}</div>
+    <div class="stat-label">Política activa</div>
+  </div>
+</div>
+
+<!-- Grid de spots -->
+<section class="section">
+  <h2 class="section-title">Mapa de spots</h2>
+  <div class="spots-grid">
+    {% for spot in spots %}
+      <div class="spot {{ 'spot--occupied' if spot.is_occupied() else 'spot--free' }}">
+        <div class="spot-id">{{ spot.get_id() }}</div>
+        <div class="spot-type">{{ spot.get_allowed().value }}</div>
+        {% if spot.is_occupied() %}
+          <div class="spot-plate">{{ spot.get_current_vehicle().get_plate() }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Tickets activos -->
+<section class="section">
+  <h2 class="section-title">Tickets activos</h2>
+  {% if tickets %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#Ticket</th>
+          <th>Placas</th>
+          <th>Tipo</th>
+          <th>Spot</th>
+          <th>Entrada</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for t in tickets %}
+        <tr>
+          <td><span class="mono">#{{ t.get_id() }}</span></td>
+          <td><span class="mono">{{ t.get_vehicle().get_plate() }}</span></td>
+          <td>{{ t.get_vehicle().get_type().value }}</td>
+          <td><span class="mono">{{ t.get_spot().get_id() }}</span></td>
+          <td><span class="mono">{{ t.get_entry_time().strftime('%H:%M:%S') }}</span></td>
+          <td>
+            <form method="POST" action="{{ url_for('exit_post') }}" style="display:inline">
+              <input type="hidden" name="ticket_id" value="{{ t.get_id() }}">
+              <button type="submit" class="btn btn--sm btn--danger">Registrar salida</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="empty-msg">No hay vehículos en el estacionamiento.</p>
+  {% endif %}
+</section>
+
+<!-- Cambiar política (polimorfismo) -->
+<section class="section">
+  <h2 class="section-title">Cambiar política de cobro <span class="tag">Polimorfismo</span></h2>
+  <form method="POST" action="{{ url_for('change_policy') }}" class="policy-form">
+    <div class="radio-group">
+      <label class="radio-label">
+        <input type="radio" name="policy" value="hourly" checked>
+        HourlyRate — $20/h auto · $10/h moto
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="policy" value="flat">
+        FlatRate — tarifa fija
+        <input type="number" name="flat_amount" value="50" min="1" step="1" class="inline-input">
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="policy" value="discounted">
+        DiscountedMoto — $20/h auto · 50% desc. moto
+      </label>
+    </div>
+    <button type="submit" class="btn btn--primary">Aplicar política</button>
+  </form>
+</section>
+
+{% endblock %}

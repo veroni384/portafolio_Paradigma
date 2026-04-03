@@ -59,7 +59,7 @@ La estructura principal del sistema agrupa los atributos necesarios para la admi
 La simulación en **Raylib** visualiza el progreso mediante una barra que se llena proporcionalmente al trabajo realizado:
 $$\text{Progreso} = \frac{\text{págs\_totales} - \text{págs\_restantes}}{\text{págs\_totales}}$$
 El retardo (delay) se maneja con `GetFrameTime()`, acumulando tiempo hasta alcanzar 1.0s para procesar una página, manteniendo la fluidez de la ventana.
-![Evidencia de la Simulación en Raylib](./captura1.png)
+![Evidencia de la Simulación en Raylib](captura.png)
 
 ## 6. Análisis Comparativo: Memoria Estática vs. Dinámica
 

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header">
+  <h1 class="page-title">Registrar Salida</h1>
+</div>
+
+<div class="form-card">
+  {% if tickets %}
+    <p class="form-hint">Selecciona el ticket o ingresa el número manualmente.</p>
+    <form method="POST" action="{{ url_for('exit_post') }}" class="form">
+
+      <div class="form-group">
+        <label class="form-label" for="ticket_id">Número de ticket</label>
+        <select id="ticket_id" name="ticket_id" class="form-input">
+          {% for t in tickets %}
+            <option value="{{ t.get_id() }}">
+              #{{ t.get_id() }} — {{ t.get_vehicle().get_plate() }}
+              ({{ t.get_vehicle().get_type().value }}) · Spot {{ t.get_spot().get_id() }}
+              · Entrada {{ t.get_entry_time().strftime('%H:%M') }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <a href="{{ url_for('dashboard') }}" class="btn btn--secondary">Cancelar</a>
+        <button type="submit" class="btn btn--danger">Registrar salida →</button>
+      </div>
+
+    </form>
+  {% else %}
+    <p class="empty-msg">No hay tickets activos en este momento.</p>
+    <a href="{{ url_for('dashboard') }}" class="btn btn--primary">Volver al dashboard</a>
+  {% endif %}
+</div>
+
+{% endblock %}

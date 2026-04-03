@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header">
+  <h1 class="page-title">Registrar Entrada</h1>
+</div>
+
+<div class="form-card">
+  <form method="POST" action="{{ url_for('entry_post') }}" class="form">
+
+    <div class="form-group">
+      <label class="form-label" for="plate">Placas del vehículo</label>
+      <input
+        type="text"
+        id="plate"
+        name="plate"
+        class="form-input"
+        placeholder="Ej. ABC-123"
+        maxlength="10"
+        required
+        autofocus
+      >
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Tipo de vehículo</label>
+      <div class="type-selector">
+        <label class="type-option">
+          <input type="radio" name="vehicle_type" value="Car" checked>
+          <span class="type-card">
+            <span class="type-icon">🚗</span>
+            <span class="type-name">Auto (Car)</span>
+          </span>
+        </label>
+        <label class="type-option">
+          <input type="radio" name="vehicle_type" value="Motorcycle">
+          <span class="type-card">
+            <span class="type-icon">🏍️</span>
+            <span class="type-name">Moto (Motorcycle)</span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <a href="{{ url_for('dashboard') }}" class="btn btn--secondary">Cancelar</a>
+      <button type="submit" class="btn btn--primary">Registrar entrada →</button>
+    </div>
+
+  </form>
+</div>
+
+{% endblock %}

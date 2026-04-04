@@ -133,11 +133,11 @@ def get_duration_hours(self) -> float:
 * No se permite salida antes de entrada
 
 ## 6. Pruebas del sistema
-![Imagen](imagen1.png)
+![Imagen](Imagen1.png)
 
-![Imagen](imagen2.png)
+![Imagen](Imagen2.png)
 
-![Imagen](imagen3.png)
+![Imagen](Imagen3.png)
 Consola
 
 Entrada: ABC-123 → Spot A1
@@ -206,8 +206,8 @@ Material de clase
 ### 10. Enlaces de la Entrega
 Veronica Acevedo Carrillo
 * Repositorio:[GitHub - portafolio_Paradigma](https://github.com/veroni384/portafolio_Paradigma)
-* Página Publicada: Práctica 02
+* Página Publicada: Práctica 02 [Practica 2](https://veroni384.github.io/portafolio_Paradigma/practica2/)
 
 Josselyn Alexa Rivera Chavez
-* Repositorio: GitHub
-* Página Publicada: Práctica 02
+* **Repositorio:** [GitHub - portafolio_Paradigma](https://github.com/JosselynAlexa/portafolio-PP)
+* **Página Publicada:** [Práctica 02 - My New Hugo Site](https://josselynalexa.github.io/portafolio-PP/practica2/)

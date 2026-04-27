@@ -1,6 +1,6 @@
 +++
 date = '2026-02-17T17:47:03-08:00'
-draft = falses
+draft = false
 title = 'Practica3'
 +++
 # Reporte de Práctica: Instalación del Entorno Haskell y Ejecución de Aplicación TODO

@@ -65,6 +65,6 @@ Se observó que el sistema de tipos y el manejo de efectos secundarios en Haskel
 **Fecha:** 17 de abril de 2026  
 **Herramientas usadas:** GHCup, GHC, Stack, PowerShell.
 
-Veronica Acevedo Carrillo
+Veronica Acevedo Carrillo 380207
 * Repositorio:[GitHub - portafolio_Paradigma](https://github.com/veroni384/portafolio_Paradigma)
-* Página Publicada: Práctica 03 [Practica 3](https://veroni384.github.io/portafolio_Paradigma/practica2/)
+* Página Publicada: [Práctica 03 - My New Hugo Site](https://veroni384.github.io/portafolio_Paradigma/practica3/)
